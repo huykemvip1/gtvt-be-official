@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>GTVT</title>
+</head>
+<style>
+    body{
+        display: block;
+        box-sizing: border-box;
+        border: 0;
+        margin: 0;
+    }
+    h1{
+        text-align: center;
+    }
+    img{
+        margin: 10px auto;
+    }
+</style>
+<body>
+    <h1>Bộ môn Thông Tin - Truyền Thông</h1>
+    <h1>Giao Thông Vận Tải</h1>
+    <img th:src="@{https://www.utc.edu.vn/assets/utc/images/logo.png}" alt="GTVT">
+    <div style="display: flex; gap: 10px; background: #c0bcbc; color: green">
+        <span style="color: white; font-size: 20px">Xác thực tại đây</span> : <a th:href="@{${link}}" th:text="${link}"></a>
+    </div>
+</body>
+</html>

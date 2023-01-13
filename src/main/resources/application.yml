@@ -1,0 +1,40 @@
+server:
+  port: 8080
+spring:
+#  connect to the server datasource
+  datasource:
+    #Server 2
+     url: jdbc:mysql://localhost:1111/gtvt
+     username: root
+     password: gtvt
+    # Server 1
+#      url: jdbc:mysql://fdb29.awardspace.net:3306/4231575_gtvt
+#      username: 4231575_gtvt
+#      password: huykemvip1
+    # Server 3
+#     url: jdbc:mysql://sql313.epizy.com:3306/epiz_33236074_XXX
+#     username: epiz_33236074
+#     password: D1ZBttxQc5OI
+     type: com.zaxxer.hikari.HikariDataSource
+#    configure the database hibernate
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+  servlet:
+    multipart:
+      max-file-size: 2GB
+      max-request-size: 2GB
+# secret JWT code
+key-jwt-secret: giaothongvantai-123sjdahudhsudsaodksaodkokdoadkaoskddnad
+expiration-jwt-secret: 6000000
+type-token-jwt-secret: Bearer
+path:
+  fileUpload: D:/FileMyOwner/gtvt-fe-v1/src/assets/img/gtvt
